@@ -5,3 +5,8 @@
     color: #000;
     cursor: pointer;
 }
+
+.Button:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
