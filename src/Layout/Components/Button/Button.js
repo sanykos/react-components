@@ -6,7 +6,7 @@ import cls from './Button.module.css'
 
 
 const Button = ({
-    children, onClick, className, disabled, active
+    children, onClick, className, disabled, active, ...attrs
 }) => {
     const classes = classNames(
         cls.Button,
@@ -14,12 +14,23 @@ const Button = ({
         {active}
     )
 
+    const onClickAction = (e) => {
+        if(disabled) {
+            e.preventDefault()
+        }else {
+            return onClick(e)
+        }
+    }
+
+    const Tag = attrs.href ? 'a' : 'button'
+
    return (
-       <button 
+       <Tag
+       {...attrs}
         className={classes}
         disabled={disabled}
-        onClick={onClick}
-   >{children}</button>
+        onClick={onClickAction}
+   >{children}</Tag>
    )
 }
 
