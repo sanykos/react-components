@@ -1,0 +1,7 @@
+.Button {
+    border: none;
+    background: transparent;
+    border: 1px solid red;
+    color: #000;
+    cursor: pointer;
+}
