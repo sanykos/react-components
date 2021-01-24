@@ -1,0 +1,10 @@
+.sliderContainer {
+  position: relative;
+  overflow: hidden;
+  .sliderTrack {
+    display: flex;
+    .sliderItem {
+      flex-shrink: 0;
+    }
+  }
+}
