@@ -1,5 +1,5 @@
 import React from 'react';
-import SandBox from 'Layout/Components/Button/sandbox';
+import SandBox from 'components/Button/sandbox';
 
 function App() {
   return <SandBox />;
